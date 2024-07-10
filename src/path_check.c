@@ -6,7 +6,7 @@
 /*   By: astoll <astoll@student.42lausanne.ch>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/15 09:22:32 by astoll            #+#    #+#             */
-/*   Updated: 2024/07/02 10:04:29 by astoll           ###   ########.fr       */
+/*   Updated: 2024/07/10 09:20:58 by astoll           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@ static void	confirm_path(int y, int x, t_game *game, char **map_copy)
 	if (map_copy[y][x] == 'E')
 		game->exit_path++;
 	if (y < 0 || y >= game->map_height || x < 0 || x >= game->map_width
-		|| map_copy[y][x] == '1' || map_copy[y][x] == 'E'
-		|| map_copy[y][x] == 'V')
+		|| map_copy[y][x] == '1' || map_copy[y][x] == 'E')
 		return ;
 	if (map_copy[y][x] == 'C')
 		game->collec_path++;
